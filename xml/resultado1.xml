@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resultado  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="resultado.xsd">
+    <valor1>7</valor1>
+    <valor2>5</valor2>
+</resultado>

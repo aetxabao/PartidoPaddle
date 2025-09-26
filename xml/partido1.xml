@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<partido xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="partido.xsd"
+         fase="final">
+    <equipo>1</equipo>
+    <equipo>2</equipo>
+    <resultados>
+        <resultado>
+            <valor1>6</valor1>
+            <valor2>2</valor2>
+        </resultado>
+        <resultado>
+            <valor1>6</valor1>
+            <valor2>4</valor2>
+        </resultado>
+    </resultados>
+</partido>
