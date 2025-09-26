@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="partido" type="partidoType"/>
+  <xs:complexType name="partidoType">
+    <xs:sequence>
+      <xs:element type="xs:int" name="equipo" maxOccurs="2" minOccurs="2"/>
+      <xs:element type="resultadosType" name="resultados"/>
+    </xs:sequence>
+    <xs:attribute type="tipoFase" name="fase" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="resultadosType">
+    <xs:sequence>
+      <xs:element type="resultadoType" name="resultado" maxOccurs="3" minOccurs="2"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resultadoType">
+    <xs:sequence>
+      <xs:element type="tipoValor" name="valor1"/>
+      <xs:element type="tipoValor" name="valor2"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="tipoValor">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="7"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoFase">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="otra"/>
+      <xs:enumeration value="octavos"/>
+      <xs:enumeration value="cuartos"/>
+      <xs:enumeration value="semifinales"/>
+      <xs:enumeration value="tercerycuartopuesto"/>
+      <xs:enumeration value="final"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
