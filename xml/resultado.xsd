@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="resultado" type="tipoResultado"/>
+    <xs:complexType name="tipoResultado">
+        <xs:sequence>
+            <xs:element name="valor1" type="tipoValor"/>
+            <xs:element name="valor2" type="tipoValor"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="tipoValor">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="7"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
